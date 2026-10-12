@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual de referencia de comandos MS-DOS: DIR, COPY, DEL, MD, CD, REN, TYPE, CHKDSK, ATTRIB. Sintaxis, opciones y ejemplos en HTML5.">
+    <meta name="keywords" content="MS-DOS, comandos DOS, manual, referencia, HTML5, dir, copy, del, retro computing">
+    <meta name="author" content="Codex MS-DOS Manual">
+    <meta property="og:title" content="Manual de Comandos MS-DOS (HTML5)">
+    <meta property="og:description" content="Manual interactivo y de referencia completa de comandos MS-DOS en HTML5.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0066cc">
+    <title>Manual de Comandos MS-DOS (HTML5)</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+    <h1>Manual de Comandos MS-DOS</h1>
+    <img src="assets/img/msdos-logo.svg" alt="Logo MS-DOS: texto verde sobre fondo negro">
+</header>
+<main>
+    <section>
+        <h2>Introducción</h2>
+        <p>Este manual describe los comandos básicos del intérprete de comandos de <strong>MS-DOS</strong>. Cada página incluye sintaxis, descripción, opciones habituales y ejemplos prácticos.</p>
+    </section>
+    <section>
+        <h2>Contenido</h2>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar comando..." aria-label="Buscar comando en la lista">
+        </div>
+        <ul id="command-list" role="list">
+            <li><a href="commands/dir.html">DIR</a> — Mostrar lista de archivos y directorios</li>
+            <li><a href="commands/copy.html">COPY</a> — Copiar archivos</li>
+            <li><a href="commands/del.html">DEL</a> — Eliminar archivos</li>
+            <li><a href="commands/md.html">MD / MKDIR</a> — Crear directorios</li>
+            <li><a href="commands/cd.html">CD</a> — Cambiar directorio actual</li>
+            <li><a href="commands/ren.html">REN / RENAME</a> — Renombrar archivos</li>
+            <li><a href="commands/type.html">TYPE</a> — Mostrar contenido de archivo de texto</li>
+            <li><a href="commands/chkdsk.html">CHKDSK</a> — Verificar disco</li>
+            <li><a href="commands/attrib.html">ATTRIB</a> — Cambiar atributos de archivos</li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p>© 2026 Manual MS-DOS • Codex Monorepo • <a href="https://github.com" rel="noopener noreferrer">GitHub</a></p>
+</footer>
+<script>
+(function() {
+    var input = document.getElementById('search');
+    var list = document.getElementById('command-list');
+    var items = list.getElementsByTagName('li');
+
+    function filter() {
+        var term = input.value.toLowerCase();
+        for (var i = 0; i < items.length; i++) {
+            var text = items[i].textContent.toLowerCase();
+            items[i].classList.toggle('hidden', term && text.indexOf(term) === -1);
+        }
+    }
+
+    if (input) {
+        input.addEventListener('input', filter);
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                input.value = '';
+                filter();
+            }
+        });
+    }
+})();
+</script>
+</body>
+</html>

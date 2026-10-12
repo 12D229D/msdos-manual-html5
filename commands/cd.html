@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comando CD de MS‑DOS: sintaxis CD /D, opciones, ejemplos. Cambiar el directorio actual de trabajo.">
+    <title>CD – Manual MS‑DOS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+    <h1>CD</h1>
+    <img src="../assets/img/msdos-logo.svg" alt="Logo MS‑DOS">
+    <nav><a href="../index.html">← Volver al índice</a> · <a href="md.html">← MD</a> · <a href="ren.html">REN →</a></nav>
+</header>
+<main>
+    <section>
+        <h2>Sintaxis</h2>
+        <pre><code>CD [/D] [unidad:][ruta]
+CD ..
+CD \</code></pre>
+    </section>
+    <section>
+        <h2>Descripción</h2>
+        <p>Cambia el directorio actual de trabajo.</p>
+        <ul>
+            <li><strong>CD ..</strong> – Sube un nivel (directorio padre).</li>
+            <li><strong>CD \</strong> – Va a la raíz de la unidad actual.</li>
+            <li><strong>CD</strong> sin argumentos muestra la ruta del directorio actual.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Opciones</h2>
+        <ul>
+            <li><strong>/D</strong> – Cambia también la unidad actual de trabajo además del directorio.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Ejemplos</h2>
+        <pre><code>CD C:\Windows\System32
+CD ..
+CD /D D:\Proyectos</code></pre>
+    </section>
+</main>
+<footer>
+    <p>© 2026 Manual MS‑DOS · <a href="../index.html">Volver al índice</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,224 @@
+:root {
+    --bg: #fafafa;
+    --bg-alt: #f0f0f0;
+    --bg-pre: #f0f0f0;
+    --text: #111;
+    --text-soft: #555;
+    --link: #0066cc;
+    --link-hover: #004499;
+    --border: #ccc;
+    --max-width: 900px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #181818;
+        --bg-alt: #222;
+        --bg-pre: #282828;
+        --text: #eee;
+        --text-soft: #aaa;
+        --link: #66b3ff;
+        --link-hover: #99ccff;
+        --border: #444;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    flex: 1;
+    color: var(--text);
+    min-width: 200px;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+}
+
+header nav {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+header nav a {
+    margin-right: 1rem;
+    white-space: nowrap;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+    color: var(--text);
+    scroll-margin-top: 1rem;
+}
+
+h2 {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.25rem;
+}
+
+pre {
+    background: var(--bg-pre);
+    padding: 1rem;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+code {
+    font-family: Consolas, "Courier New", "Liberation Mono", monospace;
+    font-size: 0.92em;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 0.85rem;
+}
+
+/* Sidebar-like sticky ToC for command pages */
+.toc-sticky {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 0.5rem 0;
+    z-index: 10;
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    max-width: 400px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+    color: var(--text-soft);
+}
+
+#command-list li.hidden {
+    display: none;
+}
+
+/* Highlight matching text */
+mark {
+    background: yellow;
+    color: #000;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    header, footer {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+    header img {
+        display: none;
+    }
+    pre {
+        border: 1px solid #000;
+        background: #fff;
+        page-break-inside: avoid;
+    }
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    .search-bar {
+        display: none;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header h1 {
+        font-size: 1.4rem;
+    }
+    header img {
+        height: 45px;
+    }
+    main {
+        padding: 0.75rem 1rem;
+    }
+    pre {
+        font-size: 0.85rem;
+    }
+}

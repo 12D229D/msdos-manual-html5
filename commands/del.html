@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comando DEL de MS‑DOS: sintaxis DEL /P /F /S /Q, opciones, ejemplos. Eliminar archivos de forma segura.">
+    <title>DEL – Manual MS‑DOS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+    <h1>DEL</h1>
+    <img src="../assets/img/msdos-logo.svg" alt="Logo MS‑DOS">
+    <nav><a href="../index.html">← Volver al índice</a> · <a href="copy.html">← COPY</a> · <a href="md.html">MD →</a></nav>
+</header>
+<main>
+    <section>
+        <h2>Sintaxis</h2>
+        <pre><code>DEL [/P] [/F] [/S] [/Q] [/A[[:atributos]]] nombre_archivo</code></pre>
+    </section>
+    <section>
+        <h2>Descripción</h2>
+        <p>Elimina uno o varios archivos. No elimina directorios; para ello se usa <strong>RMDIR</strong>.</p>
+    </section>
+    <section>
+        <h2>Opciones comunes</h2>
+        <ul>
+            <li><strong>/P</strong> – Pregunta confirmación antes de borrar cada archivo.</li>
+            <li><strong>/F</strong> – Fuerza la eliminación de archivos de solo lectura.</li>
+            <li><strong>/S</strong> – Elimina archivos en subdirectorios de forma recursiva.</li>
+            <li><strong>/Q</strong> – Modo silencioso, sin preguntar confirmación.</li>
+            <li><strong>/A[:atributos]</strong> – Elimina archivos según atributos (R, H, S, A).</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Ejemplos</h2>
+        <pre><code>DEL archivo.txt
+DEL *.bak /S /Q
+DEL /A:R documentacion.txt</code></pre>
+    </section>
+</main>
+<footer>
+    <p>© 2026 Manual MS‑DOS · <a href="../index.html">Volver al índice</a></p>
+</footer>
+</body>
+</html>

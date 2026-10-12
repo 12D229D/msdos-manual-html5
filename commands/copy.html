@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comando COPY de MS‑DOS: sintaxis COPY /D /V /Y, opciones, ejemplos. Copiar archivos entre directorios.">
+    <title>COPY – Manual MS‑DOS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+    <h1>COPY</h1>
+    <img src="../assets/img/msdos-logo.svg" alt="Logo MS‑DOS">
+    <nav><a href="../index.html">← Volver al índice</a> · <a href="dir.html">← DIR</a> · <a href="del.html">DEL →</a></nav>
+</header>
+<main>
+    <section>
+        <h2>Sintaxis</h2>
+        <pre><code>COPY [/D] [/V] [/N] [/Y | /‑Y] origen [+ origen …] [destino]</code></pre>
+    </section>
+    <section>
+        <h2>Descripción</h2>
+        <p>Copia uno o varios archivos a otro archivo o directorio. Se pueden concatenar archivos usando el símbolo <code>+</code>.</p>
+    </section>
+    <section>
+        <h2>Opciones comunes</h2>
+        <ul>
+            <li><strong>/D</strong> – Permite copiar archivos separados por directorios.</li>
+            <li><strong>/V</strong> – Verifica que los archivos se copien correctamente tras la operación.</li>
+            <li><strong>/Y</strong> – Suprime la solicitud de confirmación al sobrescribir archivos existentes.</li>
+            <li><strong>/‑Y</strong> – Fuerza la solicitud de confirmación antes de sobrescribir.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Ejemplos</h2>
+        <pre><code>COPY C:\fuente\archivo.txt D:\destino\
+COPY *.txt C:\backup\ /Y
+COPY a.txt + b.txt combinado.txt</code></pre>
+    </section>
+</main>
+<footer>
+    <p>© 2026 Manual MS‑DOS · <a href="../index.html">Volver al índice</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comando CHKDSK de MS‑DOS: sintaxis CHKDSK /F /R /X, opciones, ejemplos. Verificar disco y sistema de archivos.">
+    <title>CHKDSK – Manual MS‑DOS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+    <h1>CHKDSK</h1>
+    <img src="../assets/img/msdos-logo.svg" alt="Logo MS‑DOS">
+    <nav><a href="../index.html">← Volver al índice</a> · <a href="type.html">← TYPE</a> · <a href="attrib.html">ATTRIB →</a></nav>
+</header>
+<main>
+    <section>
+        <h2>Sintaxis</h2>
+        <pre><code>CHKDSK [unidad:] [/F] [/V] [/R] [/X] [/L[:tamaño]]</code></pre>
+    </section>
+    <section>
+        <h2>Descripción</h2>
+        <p>Comprueba la integridad del sistema de archivos y la unidad de disco, y opcionalmente corrige errores. <strong>Ejecutar en Windows como administrador</strong> para usar las opciones /F /R /X.</p>
+    </section>
+    <section>
+        <h2>Opciones comunes</h2>
+        <ul>
+            <li><strong>/F</strong> – Corrige errores del sistema de archivos encontrados.</li>
+            <li><strong>/V</strong> – Muestra la versión del proceso y los nombres de archivos mientras se comprueban.</li>
+            <li><strong>/R</strong> – Localiza sectores defectuosos y recupera información legible (incluye /F).</li>
+            <li><strong>/X</strong> – Fuerza el desmontaje de la unidad antes de la comprobación (incluye /F).</li>
+            <li><strong>/L[:tamaño]</strong> – Cambia el tamaño del archivo de registro NTFS.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Ejemplos</h2>
+        <pre><code>CHKDSK C:
+CHKDSK C: /F
+CHKDSK D: /R /X</code></pre>
+    </section>
+</main>
+<footer>
+    <p>© 2026 Manual MS‑DOS · <a href="../index.html">Volver al índice</a></p>
+</footer>
+</body>
+</html>

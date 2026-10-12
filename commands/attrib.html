@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comando ATTRIB de MS‑DOS: sintaxis ATTRIB +R -R +H -H +S -S +A -A, opciones, ejemplos. Cambiar atributos de archivos y directorios.">
+    <title>ATTRIB – Manual MS‑DOS</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+    <h1>ATTRIB</h1>
+    <img src="../assets/img/msdos-logo.svg" alt="Logo MS‑DOS">
+    <nav><a href="../index.html">← Volver al índice</a> · <a href="chkdsk.html">← CHKDSK</a> · <a href="dir.html">DIR →</a></nav>
+</header>
+<main>
+    <section>
+        <h2>Sintaxis</h2>
+        <pre><code>ATTRIB [+R|-R] [+A|-A] [+S|-S] [+H|-H] [unidad:][ruta]nombre [/S] [/D]</code></pre>
+    </section>
+    <section>
+        <h2>Descripción</h2>
+        <p>Muestra o cambia atributos de archivos y directorios.</p>
+        <ul>
+            <li><strong>R</strong> – Solo lectura (Read‑only).</li>
+            <li><strong>A</strong> – Archivo (Archive).</li>
+            <li><strong>S</strong> – Sistema (System).</li>
+            <li><strong>H</strong> – Oculto (Hidden).</li>
+        </ul>
+        <p>Sin parámetros, muestra los atributos actuales.</p>
+    </section>
+    <section>
+        <h2>Opciones</h2>
+        <ul>
+            <li><strong>/S</strong> – Aplica la operación a archivos en subdirectorios.</li>
+            <li><strong>/D</strong> – Incluye también directorios en la operación.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Ejemplos</h2>
+        <pre><code>ATTRIB +R archivo.txt
+ATTRIB -H -S *.* /S /D
+ATTRIB C:\notas\log.txt</code></pre>
+    </section>
+</main>
+<footer>
+    <p>© 2026 Manual MS‑DOS · <a href="../index.html">Volver al índice</a></p>
+</footer>
+</body>
+</html>
